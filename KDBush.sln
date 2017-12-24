@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KDBush", "KDBush\KDBush.csproj", "{984438CD-476C-4DDB-A57A-E9A7FB9D5001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KDBush.Tests", "Tests\KDBush.Tests.csproj", "{0015EC01-9D61-4A7A-97EE-8BBBDF107E66}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{984438CD-476C-4DDB-A57A-E9A7FB9D5001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{984438CD-476C-4DDB-A57A-E9A7FB9D5001}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{984438CD-476C-4DDB-A57A-E9A7FB9D5001}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{984438CD-476C-4DDB-A57A-E9A7FB9D5001}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0015EC01-9D61-4A7A-97EE-8BBBDF107E66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0015EC01-9D61-4A7A-97EE-8BBBDF107E66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0015EC01-9D61-4A7A-97EE-8BBBDF107E66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0015EC01-9D61-4A7A-97EE-8BBBDF107E66}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8A3B56D3-5E81-408C-9C77-473A7DE5DD0C}
+	EndGlobalSection
+EndGlobal
