@@ -1,5 +1,7 @@
 # kdbush
-C# KD-Bush implementation
+C# KD-Bush implementation 
+
+[![Build status](https://ci.appveyor.com/api/projects/status/oq062xmnd8p955p1?svg=true)](https://ci.appveyor.com/project/marchello2000/kdbush)
 
 Based on [this](https://github.com/mourner/kdbush) JavaScript implementation by [Vladimir Agafonkin](http://agafonkin.com/)
 
