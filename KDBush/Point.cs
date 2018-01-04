@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace KDBush
 {
-    public class Point
+    public class Point<T>
     {
-        public double X { get; set; }
-        public double Y { get; set; }
-        public int Id { get; set; }
+        public double X { get; private set; }
+        public double Y { get; private set; }
+        public T UserData { get; set; }
 
         public Point(double x, double y)
         {
@@ -18,11 +18,11 @@ namespace KDBush
             Y = y;
         }
 
-        public Point(double x, double y, int id)
+        public Point(double x, double y, T userData)
         {
             X = x;
             Y = y;
-            Id = id;
+            UserData = userData;
         }
     }
 }

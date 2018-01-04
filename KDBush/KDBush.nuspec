@@ -10,7 +10,7 @@
     <licenseUrl>http://www.opensource.org/licenses/mit-license.php</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>KDBush - fast spatial index for points, based on JS implementation https://github.com/mourner/kdbush</description>
-    <releaseNotes>First release.</releaseNotes>
+    <releaseNotes>Templatize the tree to support any type of user data.</releaseNotes>
     <copyright>Copyright 2017</copyright>
     <tags>kdbush spatial index</tags>
   </metadata>

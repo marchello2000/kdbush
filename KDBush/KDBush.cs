@@ -9,10 +9,10 @@ namespace KDBush
     /// (can't add points once the index is constructed).
     /// However, the queries are significantly (5-8x) faster
     /// </summary>
-    public class KDBush
+    public class KDBush<T>
     {
         internal readonly int nodeSize;
-        internal List<Point> points;
+        internal List<Point<T>> points;
 
         /// <summary>
         /// Initialize a KDBush
@@ -21,7 +21,7 @@ namespace KDBush
         public KDBush(int nodeSize = 64)
         {
             this.nodeSize = nodeSize;
-            this.points = new List<Point>();
+            this.points = new List<Point<T>>();
         }
 
         /// <summary>
@@ -30,7 +30,7 @@ namespace KDBush
         /// those points will be erased
         /// </summary>
         /// <param name="points">List of points to index</param>
-        public void Index(IEnumerable<Point> points)
+        public void Index(IEnumerable<Point<T>> points)
         {
             this.points.Clear();
             this.points.AddRange(points);
@@ -47,9 +47,9 @@ namespace KDBush
         /// <param name="y1">min y</param>
         /// <param name="x2">max x</param>
         /// <param name="y2">max y</param>
-        public List<Point> Query(double x1, double y1, double x2, double y2)
+        public List<Point<T>> Query(double x1, double y1, double x2, double y2)
         {
-            List<Point> hitPoints = new List<Point>();
+            List<Point<T>> hitPoints = new List<Point<T>>();
 
             Stack<SearchState> stack = new Stack<SearchState>();
             stack.Push(new SearchState(0, points.Count - 1, SearchAxis.XAxis));
@@ -109,9 +109,9 @@ namespace KDBush
         /// <param name="x">center X of the circle</param>
         /// <param name="y">center Y of the circle</param>
         /// <param name="radius">radius of the circle</param>
-        public List<Point> Query(double x, double y, double radius)
+        public List<Point<T>> Query(double x, double y, double radius)
         {
-            List<Point> hitPoints = new List<Point>();
+            List<Point<T>> hitPoints = new List<Point<T>>();
             Stack<SearchState> stack = new Stack<SearchState>();
             stack.Push(new SearchState(0, points.Count - 1, SearchAxis.XAxis));
             double r2 = radius * radius;
@@ -252,7 +252,7 @@ namespace KDBush
 
         private void Swap(int i1, int i2)
         {
-            Point temp = points[i1];
+            Point<T> temp = points[i1];
             points[i1] = points[i2];
             points[i2] = temp;
         }

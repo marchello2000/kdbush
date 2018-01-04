@@ -16,11 +16,11 @@ Compared to RBush:
 ```cs
 using KDBush
 
-KDBush kdbush = new KDBush();
+KDBush<int> kdbush = new KDBush<int>();
 
-List<Point> points = new List<Point>(){
-    new Point(54, 1, 0),
-    new Point(97, 21, 1)
+List<Point<int>> points = new List<Point<int>>(){
+    new Point<int>(54, 1, 0),
+    new Point<int>(97, 21, 1)
 };
 
 kdbush.Index(points);
